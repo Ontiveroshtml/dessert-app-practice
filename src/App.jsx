@@ -4,7 +4,7 @@ import { ProductListings } from "./components/ProductListings";
 import { ConfirmOrderModal } from "./components/ConfirmOrderModal";
 import productsData from "./data.json";
 
-//TODO: responsive
+//TODO: fix bug: reset count when the custumer start a new order
 function App() {
   const [cart, setCart] = useState([]);
   const [modal, setModal] = useState(false);
