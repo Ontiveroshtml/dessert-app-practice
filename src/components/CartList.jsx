@@ -8,7 +8,7 @@ export function CartList({ cart, onDelete, modal }) {
     <div className="flex flex-col justify-between">
       {cart.length === 0 ? (
         <>
-          <aside className="flex flex-col justify-between bg-Rose-50 w-100 px-6 py-6 rounded-lg bold">
+          <aside className="flex flex-col justify-between bg-Rose-50 md:w-100 sm:w-20 px-6 py-6 rounded-lg bold md:mx-auto">
             <h2 className="text-Red font-bold text-2xl">
               Your Cart ({cart.length})
             </h2>
@@ -23,7 +23,7 @@ export function CartList({ cart, onDelete, modal }) {
           </aside>
         </>
       ) : (
-        <aside className="flex flex-col justify-between bg-Rose-50 w-100 px-6 py-6 rounded-lg bold">
+        <aside className="flex flex-col justify-between bg-Rose-50 md:w-100 px-6 py-6 rounded-lg bold  md:mx-auto">
           <h2 className="text-Red font-bold text-2xl">
             Your Cart ({cart.length})
           </h2>
@@ -70,7 +70,7 @@ export function CartList({ cart, onDelete, modal }) {
           </div>
 
           <button
-            className="bg-Red text-Rose-100 p-4 rounded-full mt-4"
+            className="bg-Red text-Rose-100 p-4 rounded-full mt-4 cursor-pointer"
             onClick={modal}
           >
             Confirm Order

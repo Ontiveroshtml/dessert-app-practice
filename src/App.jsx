@@ -42,7 +42,7 @@ function App() {
 
   return (
     <main className="flex relative bg-Rose-100">
-      <div className="flex p-16 max-w-full gap-8 mx-auto">
+      <div className="lg:flex p-16 max-w-full gap-8 mx-auto">
         <ProductListings
           onAdd={handleAddCart}
           onRemove={handleRemoveCart}

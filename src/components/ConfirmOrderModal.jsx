@@ -1,7 +1,7 @@
 export function ConfirmOrderModal({ cart, handleModal }) {
   const total = cart.reduce((acc, cart) => acc + cart.price * cart.qty, 0);
   return (
-    <div className="bg-white p-4 rounded-md w-120">
+    <div className="bg-white p-4 rounded-md md:w-120 ">
       <img src="./icon-order-confirmed.svg" alt="" />
       <h2 className="text-2xl font-bold">Order Confirmed</h2>
       <span className="text-xs font-md opacity-60">
