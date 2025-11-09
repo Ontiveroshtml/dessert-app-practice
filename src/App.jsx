@@ -40,10 +40,9 @@ function App() {
     setCart((prev) => prev.filter((item) => item.name !== product.name));
   };
 
-  // 👉 Nueva función para reiniciar pedido
   const handleNewOrder = () => {
-    setCart([]); // vacía el carrito
-    setModal(false); // cierra el modal
+    setCart([]); 
+    setModal(false);
   };
 
   return (
