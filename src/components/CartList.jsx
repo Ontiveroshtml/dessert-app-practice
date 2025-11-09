@@ -1,4 +1,3 @@
-import { ConfirmOrderModal } from "./ConfirmOrderModal";
 
 export function CartList({ cart, onDelete, modal }) {
   const total = cart.reduce((acc, item) => acc + item.price * item.qty, 0);

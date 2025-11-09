@@ -40,6 +40,12 @@ function App() {
     setCart((prev) => prev.filter((item) => item.name !== product.name));
   };
 
+  // 👉 Nueva función para reiniciar pedido
+  const handleNewOrder = () => {
+    setCart([]); // vacía el carrito
+    setModal(false); // cierra el modal
+  };
+
   return (
     <main className="flex relative bg-Rose-100">
       <div className="lg:flex p-16 max-w-full gap-8 mx-auto">
@@ -47,7 +53,7 @@ function App() {
           onAdd={handleAddCart}
           onRemove={handleRemoveCart}
           productsData={productsData}
-          onDelete={handleAddCart}
+          onDelete={handleDeleteCart}
           cart={cart}
         />
         <CartList cart={cart} onDelete={handleDeleteCart} modal={handleModal} />
@@ -55,7 +61,10 @@ function App() {
 
       {modal && (
         <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-2">
-          <ConfirmOrderModal cart={cart} handleModal={handleModal} />
+          <ConfirmOrderModal
+            cart={cart}
+            handleNewOrder={handleNewOrder}
+          />
         </div>
       )}
     </main>

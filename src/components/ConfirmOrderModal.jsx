@@ -1,5 +1,7 @@
-export function ConfirmOrderModal({ cart, handleModal }) {
+export function ConfirmOrderModal({ cart, handleNewOrder }) {
+  
   const total = cart.reduce((acc, cart) => acc + cart.price * cart.qty, 0);
+
   return (
     <div className="bg-white p-4 rounded-md md:w-120 ">
       <img src="./icon-order-confirmed.svg" alt="" />
@@ -45,7 +47,7 @@ export function ConfirmOrderModal({ cart, handleModal }) {
         <span>Order Total</span>
         <span className="font-bold text-2xl">{total.toFixed(2)}</span>
       </div>
-      <button onClick={handleModal} className="bg-Red w-full p-3 rounded-full text-Rose-50 font-medium mt-2 hover:bg-red-900 cursor-pointer">
+      <button onClick={handleNewOrder} className="bg-Red w-full p-3 rounded-full text-Rose-50 font-medium mt-2 hover:bg-red-900 cursor-pointer">
         Start New Order
       </button>
     </div>
